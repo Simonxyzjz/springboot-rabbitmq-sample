@@ -1,0 +1,11 @@
+**/.idea
+**/.pmd
+*.class
+**/target
+**/.project
+**/.settings
+**/.classpath
+**/.myeclipse
+**/.tern-project
+**/.factorypath
+**/.springBeans
