@@ -1,0 +1,34 @@
+server: 
+  port: 8787
+  http:
+    encoding: 
+      force: true
+      charset: UTF-8
+      enabled: true
+  tomcat: 
+    uri-encoding: UTF-8
+    
+spring: 
+  rabbitmq: 
+    username: guest
+    password: guest
+    virtualHost: /
+    host: localhost
+    port: 5672
+    enable: true
+    publisher-confirms: true
+    listener:
+      simple:
+        acknowledge-mode: manual
+        concurrency: 1
+        max-concurrency: 1
+        
+rabbitmq-sample: 
+    routing-key: sample.routing-key
+    direct-exchange-name: sample.direct-exchange
+    inbound-queue: sample.inbound-queue
+    
+logging:
+  config: classpath:logback.xml
+    
+
